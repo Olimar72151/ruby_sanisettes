@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a school project to use Ruby : Ruby on Rails and API Leaflet 
+The API : https://opendata.paris.fr/api/records/1.0/search/?dataset=sanisettesparis&q=&rows=551&facet=type&facet=statut&facet=arrondissement&facet=horaire&facet=acces_pmr&facet=relais_bebe
 
-Things you may want to cover:
+Run "rails server" 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image](https://user-images.githubusercontent.com/66386209/174502730-2e3c442d-3d17-4e78-a610-cb08bfde193c.png)
