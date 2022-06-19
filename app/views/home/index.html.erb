@@ -1,0 +1,34 @@
+<h1>Sanisettes</h1>
+<div id="map"></div>
+
+<script>
+  var map = L.map('map').setView([48.856435484065145, 2.34308569822599], 13); 
+ 
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: 'Sanisettes maps'
+  }).addTo(map);
+ 
+  const myIcon = L.icon({
+    iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/images/marker-icon.png'
+  });
+ 
+  function doesitexist(data) {
+    let result;
+    if (data === undefined ){
+      result = ' ';
+    } else {
+      result = data;
+    }
+    return result;
+  }
+  
+  <% @data[:records].each do |a| %>
+    L.marker([
+      <%= a[:geometry][:coordinates][1] %>,
+      <%= a[:geometry][:coordinates][0] %>
+    ], {
+      icon: myIcon
+    }).bindPopup("Arrondissement : <%= a[:fields][:arrondissement] %></br> Adresse : " + doesitexist("<%= a[:fields][:adresse] %>")).addTo(map).openPopup();
+  <% end %>
+</script>
