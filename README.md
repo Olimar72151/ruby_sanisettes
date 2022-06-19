@@ -1,6 +1,7 @@
 # README
 
 This is a school project to use Ruby : Ruby on Rails and API Leaflet 
+
 The API : https://opendata.paris.fr/api/records/1.0/search/?dataset=sanisettesparis&q=&rows=551&facet=type&facet=statut&facet=arrondissement&facet=horaire&facet=acces_pmr&facet=relais_bebe
 
 Run "rails server" 
